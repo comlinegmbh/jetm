@@ -31,12 +31,12 @@
  */
 package etm.contrib.integration.spring.web;
 
-import etm.contrib.integration.web.HttpRequestPerformanceFilter;
-import etm.core.monitor.EtmMonitor;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import javax.servlet.ServletException;
+import etm.contrib.integration.web.HttpRequestPerformanceFilter;
+import etm.core.monitor.EtmMonitor;
+import jakarta.servlet.ServletException;
 
 /**
  * A Servlet Filter that spans performance monitoring around HTTP requests for

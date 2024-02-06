@@ -32,12 +32,6 @@
 
 package etm.contrib.integration.web;
 
-import etm.contrib.integration.web.EtmMonitorContextListener;
-import etm.core.configuration.EtmManager;
-import junit.framework.TestCase;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.lang.reflect.InvocationHandler;
@@ -45,6 +39,11 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
+
+import etm.core.configuration.EtmManager;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import junit.framework.TestCase;
 
 /**
  *

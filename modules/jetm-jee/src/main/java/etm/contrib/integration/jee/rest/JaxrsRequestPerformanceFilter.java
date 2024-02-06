@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 
 import javax.annotation.PostConstruct;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Path;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
@@ -33,6 +32,7 @@ import javax.ws.rs.ext.Provider;
 import etm.core.configuration.EtmManager;
 import etm.core.monitor.EtmMonitor;
 import etm.core.monitor.EtmPoint;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * A JAX-RS Filter that spans performance monitoring around HTTP requests.

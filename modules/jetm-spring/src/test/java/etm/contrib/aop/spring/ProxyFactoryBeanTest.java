@@ -31,14 +31,13 @@
  */
 package etm.contrib.aop.spring;
 
-import etm.core.monitor.EtmMonitor;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import etm.contrib.aop.AopTestBase;
 import etm.contrib.aop.resources.BarService;
 import etm.contrib.aop.resources.FooService;
 import etm.contrib.aop.resources.YaddaService;
+import etm.core.monitor.EtmMonitor;
 
 /**
  * Setup/Teardown methods for etm.contrib.integration.spring AOP using
@@ -49,12 +48,11 @@ import etm.contrib.aop.resources.YaddaService;
  */
 public class ProxyFactoryBeanTest extends AopTestBase {
 
-  private DefaultListableBeanFactory beanFactory;
+  private ClassPathXmlApplicationContext beanFactory;
 
   protected void setUp() throws Exception {
     super.setUp();
-    beanFactory = new XmlBeanFactory(new ClassPathResource("etm/contrib/aop/spring/factory-bean.xml"));
-    beanFactory.preInstantiateSingletons();
+    beanFactory = new ClassPathXmlApplicationContext("etm/contrib/aop/spring/factory-bean.xml");
 
     etmMonitor = (EtmMonitor) beanFactory.getBean("etmMonitor");
     yaddaService = (YaddaService) beanFactory.getBean("yaddaService");
@@ -63,7 +61,7 @@ public class ProxyFactoryBeanTest extends AopTestBase {
   }
 
   protected void tearDown() throws Exception {
-    beanFactory.destroySingletons();
+    beanFactory.close();
     super.tearDown();
   }
 

@@ -32,6 +32,8 @@
 
 package etm.contrib.integration.web;
 
+import java.io.IOException;
+
 import etm.contrib.console.ConsoleAction;
 import etm.contrib.console.actions.ActionRegistry;
 import etm.contrib.console.servlet.ServletConsoleRequest;
@@ -39,13 +41,11 @@ import etm.contrib.console.servlet.ServletConsoleResponse;
 import etm.contrib.console.util.ResourceAccessor;
 import etm.core.configuration.EtmManager;
 import etm.core.monitor.EtmMonitor;
-
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * A servlet that renders aggregated EtmMonitor results. The EtmMonitor will be retrieve from

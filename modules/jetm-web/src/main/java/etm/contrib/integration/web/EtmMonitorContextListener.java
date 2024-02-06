@@ -32,17 +32,17 @@
 
 package etm.contrib.integration.web;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+
 import etm.core.configuration.EtmConfigurationException;
 import etm.core.configuration.EtmManager;
 import etm.core.configuration.XmlEtmConfigurator;
 import etm.core.monitor.EtmMonitor;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * The EtmMonitorContextListener configures and starts an EtmMonitor using

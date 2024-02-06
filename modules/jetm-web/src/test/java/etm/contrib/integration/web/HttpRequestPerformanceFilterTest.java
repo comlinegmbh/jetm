@@ -32,24 +32,25 @@
 
 package etm.contrib.integration.web;
 
-import etm.core.aggregation.Aggregate;
-import etm.core.configuration.EtmManager;
-import etm.core.monitor.EtmMonitor;
-import etm.core.renderer.MeasurementRenderer;
-import junit.framework.TestCase;
-import org.apache.log4j.BasicConfigurator;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Map;
+
+import org.apache.log4j.BasicConfigurator;
+
+import etm.core.aggregation.Aggregate;
+import etm.core.configuration.EtmManager;
+import etm.core.monitor.EtmMonitor;
+import etm.core.renderer.MeasurementRenderer;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import junit.framework.TestCase;
 
 /**
  * HTTP request filter test.

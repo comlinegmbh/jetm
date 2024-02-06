@@ -33,17 +33,18 @@
 
 package etm.contrib.integration.web;
 
-import etm.core.aggregation.Aggregate;
-import etm.core.configuration.EtmManager;
-import etm.core.renderer.MeasurementRenderer;
-import org.apache.log4j.BasicConfigurator;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Map;
+
+import org.apache.log4j.BasicConfigurator;
+
+import etm.core.aggregation.Aggregate;
+import etm.core.configuration.EtmManager;
+import etm.core.renderer.MeasurementRenderer;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @author void.fm

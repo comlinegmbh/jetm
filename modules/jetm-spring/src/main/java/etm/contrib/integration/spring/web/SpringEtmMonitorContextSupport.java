@@ -31,13 +31,14 @@
  */
 package etm.contrib.integration.spring.web;
 
-import etm.core.monitor.EtmMonitor;
+import java.util.Iterator;
+import java.util.Map;
+
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 
-import javax.servlet.ServletException;
-import java.util.Iterator;
-import java.util.Map;
+import etm.core.monitor.EtmMonitor;
+import jakarta.servlet.ServletException;
 
 /**
  * Helper class to retrieve EtmMonitor instance from etm.contrib.integration.spring configuration.
